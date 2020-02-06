@@ -2048,9 +2048,6 @@ class DataFrame(CommonFrame):
 
             if data_format[1]:  # Floating Point
 
-                if not -3.142 <= phasor[1] <= 3.142:
-                    raise ValueError("Angle must be in range -3.14 <= ANGLE <= 3.14")
-
                 mg = pack("!f", float(phasor[0]))
                 an = pack("!f", float(phasor[1]))
                 measurement = mg + an
