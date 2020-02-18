@@ -2377,6 +2377,7 @@ class DataFrame(CommonFrame):
 
         data_frame = { "pmu_id": self._pmu_id_code,
                        "time": self.get_soc() + self.get_frasec()[0] / self.cfg.get_time_base(),
+                       "time_quality_code": self.get_frasec()[4],
                        "measurements": measurements }
 
         return data_frame
